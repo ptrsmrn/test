@@ -16,6 +16,6 @@ The time we greeted you.
 
 ## Example usage
 
-uses: ptrsmrn/test@v1
+uses: ptrsmrn/test@v1 
 with:
   who-to-greet: 'Mona the Octocat'
