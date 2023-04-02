@@ -5,9 +5,6 @@ inputs:
     description: 'Personal Access Token (PAT) to use when running Github Automation'
     required: true
     default: 'invalid'
-outputs:
-  unused_output_param:
-    description: 'GH passes output of action through $GITHUB_OUTPUT env var, our script would have to write to it'
 runs:
   using: 'docker'
   image: 'Dockerfile'

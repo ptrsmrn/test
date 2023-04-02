@@ -7,8 +7,6 @@ jobs:
     steps:
       - name: Runs GitHub Automation script
         id: gh_auto
-        uses: ptrsmrn/test@v22
+        uses: ptrsmrn/test@v23
         with:
           pat-var: ${{ secrets.PAT }}
-      - name: Get the output of the script
-        run: echo "The output is ${{ steps.gh_auto.outputs.unused_output_param }}"
