@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Runs GitHub Automation script
         id: gh_auto
-        uses: ptrsmrn/test@v21
+        uses: ptrsmrn/test@v22
         with:
           pat-var: ${{ secrets.PAT }}
       - name: Get the output of the script
