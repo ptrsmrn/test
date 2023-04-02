@@ -13,4 +13,4 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   env:
-    PAT: ${{ who-to-greet }}
+    PAT: ${{ inputs.who-to-greet }}
