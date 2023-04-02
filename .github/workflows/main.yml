@@ -1,16 +1,14 @@
 on: [push]
 
 jobs:
-  hello_world_job:
+  github_automation_job:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: Runs GitHub Automation
     steps:
-      - name: Hello world action step
-        id: hello
-          #uses: actions/hello-world-docker-action@v2
-        uses: ptrsmrn/test@v20
+      - name: Runs GitHub Automation script
+        id: gh_auto
+        uses: ptrsmrn/test@v21
         with:
-          who-to-greet: ${{ secrets.PAT }}
-      # Use the output from the `hello` step
-      - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.time }}"
+          pat-var: ${{ secrets.PAT }}
+      - name: Get the output of the script
+        run: echo "The output is ${{ steps.gh_auto.outputs.unused_output_param }}"

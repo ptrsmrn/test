@@ -1,16 +1,15 @@
-# action.yml
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'Run GitHub Automation'
+description: 'Performs some GraphQL queries & mutations in order to automatically update Issues & PRs'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  pat-var:
+    description: 'Personal Access Token (PAT) to use when running Github Automation'
     required: true
-    default: 'World'
+    default: 'invalid'
 outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+  unused_output_param:
+    description: 'GH passes output of action through $GITHUB_OUTPUT env var, our script would have to write to it'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   env:
-    PAT: ${{ inputs.who-to-greet }}
+    PAT: ${{ inputs.pat-var }}
