@@ -8,5 +8,5 @@ COPY requirements.txt //github/workspace/requirements.txt
 COPY gh_project_automation.py /github/workspace/gh_project_automation.py
 RUN pip install -r /github/workspace/requirements.txt
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["/github/workspace/entrypoint.sh"]
 #ENTRYPOINT ["/entrypoint.py $PAT"]
