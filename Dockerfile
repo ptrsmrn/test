@@ -1,11 +1,11 @@
 FROM python
 
-WORKDIR /
+WORKDIR /github/workspace
 
 COPY entrypoint.py /entrypoint.py
 COPY entrypoint.sh /entrypoint.sh
 COPY requirements.txt /requirements.txt
-COPY gh_project_automation.py /gh_project_automation.py
+COPY gh_project_automation.py /github/workspace/gh_project_automation.py
 RUN pip install -r requirements.txt
 
 ENTRYPOINT ["/entrypoint.sh"]
