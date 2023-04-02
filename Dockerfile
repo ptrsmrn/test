@@ -1,5 +1,7 @@
 FROM python
 
+WORKDIR /
+
 COPY entrypoint.py /entrypoint.py
 COPY entrypoint.sh /entrypoint.sh
 COPY requirements.txt /requirements.txt
