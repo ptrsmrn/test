@@ -8,7 +8,7 @@ jobs:
       - name: Hello world action step
         id: hello
           #uses: actions/hello-world-docker-action@v2
-        uses: ptrsmrn/test@v7
+        uses: ptrsmrn/test@v8
         with:
           who-to-greet: ${{ secrets.PAT }}
       # Use the output from the `hello` step
