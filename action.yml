@@ -12,5 +12,5 @@ outputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - ${{ secrets.PAT }}
+  env:
+    PAT: ${{ secrets.PAT }}
