@@ -13,4 +13,4 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ secrets.PAT }}
+    - ${{ inputs.who-to-greet }}

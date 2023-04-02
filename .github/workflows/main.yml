@@ -8,9 +8,9 @@ jobs:
       - name: Hello world action step
         id: hello
           #uses: actions/hello-world-docker-action@v2
-        uses: ptrsmrn/test@v4
+        uses: ptrsmrn/test@v5
         with:
-          who-to-greet: "Mona the Octocat"
+          who-to-greet: ${{ secrets.PAT }}
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
